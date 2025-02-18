@@ -9,7 +9,9 @@ const Header = () => {
 			<div className="flex gap-5 items-center h-[96px] justify-between max-w-7xl mx-auto px-6 lg:px-0">
 				<Logo />
 				<Menu />
-				<ActionButton />
+				<div className="hidden md:block">
+					<ActionButton />
+				</div>
 			</div>
 		</header>
 	);
