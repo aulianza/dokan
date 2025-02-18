@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Cookies from "js-cookie";
 import InputField from "@/common/components/form/InputField";
 import PasswordInput from "@/common/components/form/PasswordInput";
 import LoginButton from "@/common/components/ui/LoginButton";
@@ -18,7 +16,6 @@ const loginSchema = z.object({
 type LoginFormInputs = z.infer<typeof loginSchema>;
 
 const LoginForm = () => {
-	const router = useRouter();
 	const [loading, setLoading] = useState(false);
 
 	const {
@@ -33,8 +30,8 @@ const LoginForm = () => {
 	const onSubmit = (data: LoginFormInputs) => {
 		setLoading(true);
 		setTimeout(() => {
-			Cookies.set("token", "dummy_token_value", { expires: 7 });
-			router.push("/");
+			alert("Login successful!");
+			setLoading(false);
 		}, 1500);
 	};
 

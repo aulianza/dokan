@@ -21,7 +21,7 @@ const LoginModule = () => {
 				initial="initial"
 				animate="animate"
 				exit="exit"
-				className="w-full max-w-md space-y-20"
+				className="w-full max-w-md space-y-6"
 			>
 				<AuthHeading
 					title="Sign In"
